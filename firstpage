@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <link href="link rel=" preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Roboto+Mono:ital,wght@1,200&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Note Log</title>
+    <style>
+        body {
+            background-image: url(wallpaperflare.com_wallpaper.jpg);
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105_1280.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        input {
+            background-color: #000;
+            color: #fff;
+
+
+            border-radius: 10px;
+            padding: 10px;
+            margin: 1;
+            opacity: 0.5;
+            font-size: large;
+
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        textarea {
+            background-color: #000;
+            color: #fff;
+
+
+            border-radius: 10px;
+            padding: 10px;
+            margin: 1;
+            opacity: 0.5;
+            font-size: large;
+
+            font-family: 'Roboto Mono', monospace;
+
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(83, 66, 66);
+            border-radius: 10%;
+            width: fit-content;
+            margin-left: ;
+        }
+
+        label {
+            color: rgb(226, 229, 233);
+            width: fit-content;
+            border-radius: 10%;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            width: 50%;
+            margin: auto;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        form input[type="text"],
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            height: 150px;
+            width: 100%;
+            opacity: 30%;
+        }
+
+        form button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .notes {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .note {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+        }
+
+        .note h2 {
+            margin-top: 0;
+        }
+
+        .note p {
+            margin-bottom: 0;
+        }
+
+        #saveButton {
+            width: 100px;
+            margin-left: 44%;
+            border-radius: 10%;
+            border: 1px solid;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 10px;
+            background: transparent;
+            transition: .2s ease-in-out 0s;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        #newNoteButton {
+            width: 100px;
+            margin-left: 44%;
+            border-radius: 10%;
+            border: 1px solid;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 10px;
+            background: transparent;
+            transition: .2s ease-in-out 0s;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        #savedNotesButton {
+            width: 100px;
+            margin-left: 44%;
+            border-radius: 10%;
+            border: 1px solid;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 10px;
+            background: transparent;
+            transition: .2s ease-in-out 0s;
+            cursor: pointer;
+            height: 100%;
+        }
+
+
+        /* Add styles for the anchor tabs */
+       
+
+        .navbar a {
+            text-align: left;
+            padding: 10px;
+           margin-right:10pxl
+
+            text-decoration: none;
+            font-weight: bold;
+
+           
+            color: wheat;
+            font-family: 'Bebas Neue', cursive;
+            font-size: larger;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 10px;
+            color: #ddd;
+            font-size: 100px;
+            font-family: 'Bruno Ace', cursive;
+            text-shadow: 2px 10px rgb(255, 0, 47);
+            margin-top:1vh;
+
+
+        }
+
+        #saveButton:hover {
+            background-color: coral;
+            cursor: pointer;
+            transform: scale(1.25);
+            background: #FFF;
+            color: #000;
+        }
+
+        #newNoteButton:hover {
+            background-color: coral;
+            cursor: pointer;
+            transform: scale(1.25);
+            background: #FFF;
+            color: #000;
+        }
+
+        #savedNotesButton:hover {
+            background-color: coral;
+            cursor: pointer;
+            transform: scale(1.25);
+            background: #FFF;
+            color: #000;
+        }
+        ab:hover{
+            cursor:pointer;
+            transform:scale(1.25)
+        }
+    </style>
+</head>
+
+<body>
+    <link rel="stylesheet" href="n1.css">
+    <div class="container">
+        <h1><b>Note Log</b></h1>
+        <div class="navbar">
+            <a href="n1.html" id="ho">Home</a>
+            <a href="about.html "id="ab">About</a>
+        </div>
+        <form id="noteForm">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title">
+            <label for="content">Content:</label>
+            <textarea id="content" name="content"></textarea>
+            <div id="qw"><button type="submit" class="but" id="saveButton">Save Note</button>
+                <button type="button" class="but" id="newNoteButton">New Note</button>
+                <button type="button" class="but" id="savedNotesButton">Saved Notes</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Retrieve the saved note data from local storage
+            var savedNoteData = JSON.parse(localStorage.getItem("savedNotes")) || [];
+
+            // Function to display the saved notes on the page
+            function displayNotes() {
+                var noteList = $("#noteList");
+                noteList.empty(); // Clear existing notes
+
+                // Iterate through the saved note data and create note elements
+                $.each(savedNoteData, function (index, note) {
+                    var noteElement = $("<div>").addClass("note");
+                    $("<h2>").text(note.title).appendTo(noteElement);
+                    $("<p>").text(note.content).appendTo(noteElement);
+                    noteList.append(noteElement);
+                });
+            }
+
+            // Add event listener to the form submit event
+            $("#noteForm").on("submit", function (event) {
+                event.preventDefault();
+
+                // Get the values from the form
+                var title = $("#title").val();
+                var content = $("#content").val();
+
+                // Create a new note object
+                var newNote = {
+                    title: title,
+                    content: content
+                };
+
+                // Add the new note to the saved note data
+                savedNoteData.push(newNote);
+
+                // Save the note data to local storage
+                localStorage.setItem("savedNotes", JSON.stringify(savedNoteData));
+
+                // Clear the form fields
+                $("#title").val("");
+                $("#content").val("");
+
+                // Display the updated notes
+                displayNotes();
+            });
+
+            // Add event listener to the "New Note" button
+            $("#newNoteButton").on("click", function () {
+                $("#title").val("");
+                $("#content").val("");
+            });
+
+            // Add event listener to the "Saved Notes" button
+            $("#savedNotesButton").on("click", function () {
+                window.location.href = "n2.html";
+            });
+
+            // Call the displayNotes() function when the page loads
+            displayNotes();
+        });
+    </script>
+</body>
+
+</html>
