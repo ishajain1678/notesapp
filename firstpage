@@ -271,33 +271,39 @@
                 });
             }
 
-            // Add event listener to the form submit event
             $("#noteForm").on("submit", function (event) {
-                event.preventDefault();
+  event.preventDefault();
 
-                // Get the values from the form
-                var title = $("#title").val();
-                var content = $("#content").val();
+  // Get the values from the form
+  var title = $("#title").val();
+  var content = $("#content").val();
+  
+  // Get the current date and time
+  var currentDate = new Date();
+  var timestamp = currentDate.toLocaleString();
 
-                // Create a new note object
-                var newNote = {
-                    title: title,
-                    content: content
-                };
+  // Create a new note object
+  var newNote = {
+    title: title,
+    content: content,
+    timestamp: timestamp // Add the timestamp property to the note object
+  };
 
-                // Add the new note to the saved note data
-                savedNoteData.push(newNote);
+  // Add the new note to the saved note data
+  savedNoteData.push(newNote);
 
-                // Save the note data to local storage
-                localStorage.setItem("savedNotes", JSON.stringify(savedNoteData));
+  // Save the note data to local storage
+  localStorage.setItem("savedNotes", JSON.stringify(savedNoteData));
 
-                // Clear the form fields
-                $("#title").val("");
-                $("#content").val("");
+  // Clear the form fields
+  $("#title").val("");
+  $("#content").val("");
 
-                // Display the updated notes
-                displayNotes();
-            });
+  // Display the updated notes
+  displayNotes();
+});
+
+                
 
             // Add event listener to the "New Note" button
             $("#newNoteButton").on("click", function () {
